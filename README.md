@@ -1,16 +1,29 @@
-# React + Vite
+# 📖 Librería Siamés
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Librería siamés es una libreria independiente con mas de 15 años de trayectoria, ubicada en el barrio lastarria de santiago. La librería cuenta con un amplio catalogo de mas de 8.000 títulos, incluyendo literatura, textos académicos, libros infantiles y bestsellers.
+<br/><br/>
 
-Currently, two official plugins are available:
+## 📜 Reglas para commit.
+1. Cada commit debe incluir un registro de cambios como se muestra en la sección de versionado.
+2. El versionado debe ser semántico (Cambios Grandes, Menores, Correcciones Pequeñas).
+3. Los commits deben ser pull requests, no se aceptaran pushs directos a la rama principal
+4. Si se crea una rama secundaria ahi si se puede usar push.
+5. Al mezclar una rama secundaria al main el código debe ser revisado por alguien mas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br/><br/>
+## Versiones
+<details> 
+<summary><strong> v0.1.0 🐝🐝</strong></summary>
+Se añadió la base del proyecto, los cuales tienen lo siguiente
+<br/><br/>
+        
+- React-native
 
-## React Compiler
+- Inclusión de Bootstrap 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Uso de metodologia Atomic Design
 
-## Expanding the ESLint configuration
+- Prrimera version del Home
+</details>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
