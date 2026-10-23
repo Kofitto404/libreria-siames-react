@@ -7,3 +7,4 @@ export default function TituloSeccion({ titulo, sub, rn }) {
     </div>
   )
 }
+  

@@ -8,7 +8,7 @@ const enlaces = [
   { to: '/publicar', texto: 'Publica con Nosotros' },
 ]
 
-export default function PiePagina({ onToast }) {
+export default function PiePagina() {
   return (
     <footer className="bg-dark text-white py-5">
       <Container>
@@ -30,7 +30,7 @@ export default function PiePagina({ onToast }) {
           <Col xs={12} md={4}>
             <h5 className="fw-bold mb-3">Newsletter</h5>
             <p className="text-secondary small">Recibe ofertas exclusivas y novedades en tu correo.</p>
-            <FormNewsletter onSuscribir={() => onToast('¡Gracias por suscribirte!')} />
+            <FormNewsletter />
           </Col>
         </Row>
         <hr className="border-secondary my-4" />
