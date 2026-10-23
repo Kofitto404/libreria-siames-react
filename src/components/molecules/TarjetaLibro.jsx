@@ -6,11 +6,13 @@ import Icono from '../atoms/Icono'
 import Imagen from '../atoms/Imagen'
 import Insignia from '../atoms/Insignia'
 import Precio from '../atoms/Precio'
+import { useInventario } from '../../context/InventarioContext'
 
 export default function TarjetaLibro({ libro, onAgregar }) {
     const [agregado, setAgregado] = useState(false)
     const temporizador = useRef(null)
-    const sinStock = libro.stock <= 0
+    const { stockDe } = useInventario()
+    const sinStock = stockDe(libro.id) <= 0
     const rutaDetalle = `/productos/${libro.id}`
 
     useEffect(() => () => clearTimeout(temporizador.current), [])
