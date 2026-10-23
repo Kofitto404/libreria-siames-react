@@ -6,6 +6,7 @@ import fondoImg from '../../assets/background.png'
 
 export default function Banner({
   onIrInicio,
+  textoBoton = 'Ir a Inicio',
   fondo = fondoImg,
   imagen = '/icon-no-bg.png',
 }) {
@@ -27,12 +28,12 @@ export default function Banner({
             <TextoBanner titulo={'Librería independiente desde 2011.'} texto="Contamos con un amplio catálogo de más de 8,000 títulos, incluyendo literatura, textos académicos, libros infantiles y bestsellers." />
             <div className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mt-4">
               <Boton type="button" className="counter" variant="outline-light" onClick={onIrInicio}>
-                Ir a Inicio
+                {textoBoton}
               </Boton>
             </div>
           </Col>
-          <Col xs={12} lg={6} className="text-centers">
-            <Imagen src={imagen}  className='rounded' alt="Librería Siamés" style={{ maxHeight: 320 }} />
+          <Col xs={12} lg={6} className="text-center">
+            <Imagen src={imagen} className='rounded' alt="Librería Siamés" style={{ maxHeight: 320 }} />
           </Col>
         </Row>
       </Container>

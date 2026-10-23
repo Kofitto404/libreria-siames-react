@@ -1,0 +1,1 @@
+export const formatearPrecio = (valor) => `$${valor.toLocaleString('es-CL')}`
