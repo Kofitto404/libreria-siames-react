@@ -5,15 +5,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import Inicio from './Inicio.jsx'
 import { SesionProvider } from './context/SesionContext.jsx'
+import { InventarioProvider } from './context/InventarioContext.jsx'
 import { CarritoProvider } from './context/CarritoContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <SesionProvider>
-        <CarritoProvider>
-          <Inicio />
-        </CarritoProvider>
+        <InventarioProvider>
+          <CarritoProvider>
+            <Inicio />
+          </CarritoProvider>
+        </InventarioProvider>
       </SesionProvider>
     </BrowserRouter>
   </StrictMode>,
