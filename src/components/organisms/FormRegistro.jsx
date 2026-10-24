@@ -5,6 +5,7 @@ import Icono from '../atoms/Icono'
 import CampoFormulario from '../molecules/CampoFormulario'
 import { useSesion } from '../../context/SesionContext'
 import { correoPermitido, DOMINIOS_PERMITIDOS } from '../../utils/validaciones'
+import { rutValido } from '../../utils/rut'
 
 const inicial = {
     nombres: '',
@@ -22,6 +23,7 @@ function validar(v) {
     if (!v.nombres.trim()) errores.nombres = 'Los nombres son obligatorios.'
     if (!v.apellidos.trim()) errores.apellidos = 'Los apellidos son obligatorios.'
     if (!v.rut.trim()) errores.rut = 'El RUT es obligatorio.'
+    else if (!rutValido(v.rut)) errores.rut = 'El RUT no es válido.'
     if (!v.direccion.trim()) errores.direccion = 'La dirección es obligatoria.'
     if (!correoPermitido(v.correo)) {
         errores.correo = `El correo es obligatorio y debe pertenecer a ${DOMINIOS_PERMITIDOS.join(', ')}.`
@@ -124,7 +126,7 @@ export default function FormRegistro() {
                         <CampoFormulario id="registroPassword" etiqueta="Contraseña *" type="password" value={valores.password} onChange={cambiar('password')} error={errores.password} />
                     </Col>
                     <Col md={6}>
-                        <CampoFormulario id="confirmarPassword" etiqueta="Confirmar contraseña *" type="password" value={valores.confirmar} onChange={cambiar('confirmar')} error={errores.confirmar} />
+                        <CampoFormulario id="confirmarPassword" etiqueta="Repetir contraseña *" type="password" value={valores.confirmar} onChange={cambiar('confirmar')} error={errores.confirmar} />
                     </Col>
                 </Row>
 

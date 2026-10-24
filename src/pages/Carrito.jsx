@@ -44,6 +44,10 @@ export default function Carrito() {
                 <Boton variant="outline-secondary" onClick={vaciar}>Vaciar carrito</Boton>
                 <h4 className="mb-0">Total: <span className="text-primary">{formatearPrecio(total)}</span></h4>
             </div>
+            <Boton as={Link} to="/pago" variant="primary" className="w-100 py-2 fw-bold mt-4">
+                <Icono nombre="credit-card" className="me-2" />
+                Finalizar compra
+            </Boton>
         </Seccion>
     )
 }

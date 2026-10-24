@@ -6,9 +6,9 @@ import CampoFormulario from '../molecules/CampoFormulario'
 import { useSesion } from '../../context/SesionContext'
 import { esCorreo } from '../../utils/validaciones'
 
-export default function FormLogin({ onExito }) {
+export default function FormLogin({ onExito, inicial = { correo: '', password: '' } }) {
     const { iniciarSesion } = useSesion()
-    const [valores, setValores] = useState({ correo: '', password: '' })
+    const [valores, setValores] = useState(inicial)
     const [errores, setErrores] = useState({})
     const [errorGeneral, setErrorGeneral] = useState('')
 
